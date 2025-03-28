@@ -78,58 +78,71 @@ section{
 }
 .main .zao {
     position: relative;
-    margin: 1.5rem auto;
-    width: 80%; /* Réduction supplémentaire */
-    max-width: 320px; /* Nouvelle largeur max */
+    margin: 1rem auto;
+    width: 85%;
+    max-width: 300px;
     height: auto;
-    min-height: 380px; /* Réduction de la hauteur */
+    min-height: 340px;
     background-color: #ccc;
-    border-radius: 6px; /* Radius plus petit */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Ombre plus subtile */
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
 .zao img {
     width: 100%;
     height: 100%;
-    min-height: 380px; /* Ajustement correspondant */
+    min-height: 340px;
     object-fit: cover;
     object-position: center;
-    border-radius: 6px; /* Harmonisation du radius */
-    transition: transform 0.25s ease-in-out; /* Transition plus rapide */
+    border-radius: 6px;
+    transition: transform 0.25s ease-in-out;
 }
 
 .zao img:hover {
-    transform: scale(1.03); /* Effet hover plus discret */
+    transform: scale(1.03);
 }
 
+/* Pour écrans moyens */
 @media (max-width: 768px) {
     .main .zao {
-        width: 85%;
-        max-width: 280px;
-        min-height: 340px; /* Réduction mobile */
-    }
-    
-    .zao img {
-        min-height: 340px;
-        border-radius: 5px; /* Radius mobile réduit */
-    }
-}
-
-@media (max-width: 480px) {
-    .main .zao {
         width: 90%;
-        max-width: 260px;
-        min-height: 320px; /* Dernière réduction */
-        border-radius: 5px;
+        max-width: 280px;
+        min-height: 320px;
     }
     
     .zao img {
         min-height: 320px;
-        border-radius: 4px; /* Radius minimal */
     }
 }
 
+/* Pour smartphones standard */
+@media (max-width: 480px) {
+    .main .zao {
+        width: 95%;
+        max-width: 260px;
+        min-height: 300px;
+    }
+    
+    .zao img {
+        min-height: 300px;
+    }
+}
+
+/* Spécifique pour 350px */
+@media (max-width: 350px) {
+    .main .zao {
+        width: 97%;
+        max-width: 240px;
+        min-height: 280px;
+        border-radius: 4px;
+    }
+    
+    .zao img {
+        min-height: 280px;
+        border-radius: 4px;
+    }
+}
 
 .main .content{
     max-width: 800px;
