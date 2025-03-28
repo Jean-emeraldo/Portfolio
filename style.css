@@ -572,20 +572,31 @@ section{
   
   .contact-form .input-box .send-btn{
     color: #fff;
-    background: #3a6cf4;
+    background: linear-gradient(90deg, #3a6cf4, #235bf6); /* Dégradé pour un effet moderne */
     display: inline-block;
-    font-size: 1.1em;
-    font-weight: 500;
+    font-size: 1.2em;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     width: 100%;
+    padding: 12px 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.5s ease;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre */
   }
   
   .contact-form .input-box .send-btn:hover{
-    background: #235bf6;
+    background: linear-gradient(90deg, #235bf6, #3a6cf4); /* Inversion du dégradé au survol */
+    transform: translateY(-2px); /* Légère élévation au survol */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Accentuation de l'ombre */
+  }
+  
+  .contact-form .input-box .send-btn:disabled{
+    background: #ccc; /* Couleur grisée pour l'état désactivé */
+    cursor: not-allowed;
+    box-shadow: none;
   }
 
   /* Footer */
