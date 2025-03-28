@@ -77,40 +77,34 @@ section{
     background-attachment: fixed;
 }
 .main .zao {
-    position: absolute;
-    top: 55%;
-    left: 80%; 
-    transform: translate(-50%, -50%); 
-    width: 80%; 
+    position: relative; 
+    margin: 0 auto; 
+    width: 100%; 
     max-width: 400px; 
-    height: 450px; 
+    height: 400px; 
     background-color: #ccc;
-    border-radius: 10px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    overflow: hidden; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .zao img {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover;
-    border-radius: 10px; 
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
 .zao img:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05); /* Zoom léger au survol */
 }
-
 
 @media (max-width: 768px) {
     .main .zao {
-        width: 90%; 
-        max-width: 350px; 
+        max-width: 90%; /* Réduit la largeur maximale sur les petits écrans */
     }
 }
-
-
 
 .main .content{
     max-width: 800px;
