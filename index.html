@@ -309,39 +309,46 @@
       AOS.init({offset:0});
     </script>
     <script>
-
-        window.addEventListener("scroll", function(){
-    scrollBtn.classList.toggle("active", window.scrollY > 500);
-});
-
-
-
+        // Sélection du bouton de scroll (à définir dans le HTML avec une classe comme .scroll-btn)
+        const scrollBtn = document.querySelector(".scroll-btn");
+    
+        // Activer le bouton de scroll lors du défilement
+        window.addEventListener("scroll", function() {
+            if (scrollBtn) {
+                scrollBtn.classList.toggle("active", window.scrollY > 500);
+            }
+        });
+    
+        // Sélection du bouton menu et de la navigation
         const menuBtn = document.querySelector(".menu-btn");
         const navigation = document.querySelector(".navigation");
-        const navigationItems = document.querySelector(".navigation a");
-
-        menuBtn.addEventListener("click", () => {
-            menuBtn.classList.toggle("active");
-            navigation.classList.toggle("active");
-        })
-
-        // Navigation Effects
-        window.addEventListener("scroll", function(){
+        const navigationItems = document.querySelectorAll(".navigation a");
+    
+        // Gestion du clic sur le bouton menu
+        if (menuBtn) {
+            menuBtn.addEventListener("click", () => {
+                menuBtn.classList.toggle("active");
+                navigation.classList.toggle("active");
+            });
+        }
+    
+        // Effet sticky sur le header lors du défilement
+        window.addEventListener("scroll", function() {
             const header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
-
+            if (header) {
+                header.classList.toggle("sticky", window.scrollY > 0);
+            }
+        });
+    
+        // Gestion du clic sur les éléments du menu de navigation
         navigationItems.forEach((navigationItem) => {
             navigationItem.addEventListener("click", () => {
                 menuBtn.classList.remove("active");
-                navigation.classList.remove("active")
-            })
-        })
-
-
-
+                navigation.classList.remove("active");
+            });
+        });
     </script>
-
+    
 
 
 
